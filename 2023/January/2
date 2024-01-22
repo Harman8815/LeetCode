@@ -1,0 +1,54 @@
+## Problem Link
+[LeetCode - Convert an Array Into a 2D Array with Conditions](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/?envType=daily-question&envId=2024-01-02)
+
+## Intuition
+
+You are given an integer array `nums`. You need to create a 2D array from `nums` satisfying the following conditions:
+
+1. The 2D array should contain only the elements of the array `nums`.
+2. Each row in the 2D array contains distinct integers.
+3. The number of rows in the 2D array should be minimal.
+Return the resulting array. If there are multiple answers, return any of them.
+
+## Approach
+
+### Frequency Array
+Initialize a frequency array (`freq`) to keep track of the frequency of each element in the input array `nums`.
+
+### 2D Array Construction
+1. Iterate through the elements of `nums`.
+2. For each element `c`, check the frequency of `c` in the frequency array. If the frequency is greater than or equal to the current size of the result 2D array (`ans`), add a new row to the result array.
+
+### Update Result Array
+Add the current element `c` to the row corresponding to its frequency in the result array (`ans`). Increment the frequency of `c`.
+
+### Return Result
+Return the final result array.
+
+## Complexity
+
+### Time Complexity: O(N)
+The algorithm iterates through the elements of the input array once.
+
+### Space Complexity: O(N)
+The additional space is used for the frequency array and the result array, both of which are directly proportional to the size of the input array `nums`.
+
+## Code
+
+```java
+class Solution {
+    public List<List<Integer>> findMatrix(int[] nums) {
+        int freq[] = new int[nums.length + 1];
+
+        ArrayList<List<Integer>> ans = new ArrayList<>();
+        for (int c : nums) {
+            if (freq[c] >= ans.size()) {
+                ans.add(new ArrayList<>());
+            }
+            ans.get(freq[c]).add(c);
+            freq[c]++;
+        }
+
+        return ans;
+    }
+}
