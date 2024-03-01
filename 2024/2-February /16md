@@ -1,0 +1,45 @@
+
+# [Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/description/?envType=daily-question&envId=2024-02-16)
+
+## Intuition
+To find the least number of unique integers after removing exactly `k` elements from an array `arr`, we can first count the frequency of each integer in `arr` using a HashMap. We then create an array `sortedFreq` to store the frequencies and sort it in ascending order. We iterate through `sortedFreq` and remove elements from the array until `k` becomes 0 or we run out of elements.
+
+## Approach
+1. Initialize a HashMap `map` to store the frequency of each integer in `arr`.
+2. Iterate through each element `n` in `arr` and update its frequency in `map`.
+3. Create an array `sortedFreq` of size equal to the number of unique integers in `arr` and fill it with the frequencies from `map`.
+4. Sort `sortedFreq` in ascending order.
+5. Iterate through `sortedFreq`:
+   - If `k` is less than the current frequency, break the loop.
+   - Otherwise, decrement `k` by the current frequency.
+6. Return the number of remaining elements in `sortedFreq` after the loop.
+
+## Complexity
+- Time complexity: O(n log n), where n is the number of elements in `arr`. The sorting operation dominates the time complexity.
+- Space complexity: O(n), where n is the number of unique elements in `arr`. The space is used to store the frequencies in `map` and `sortedFreq`.
+
+## Code
+```java
+class Solution {
+    public int findLeastNumOfUniqueInts(int[] arr, int k) {
+        var map = new HashMap<Integer, Integer>();
+
+        for (var n : arr)
+            map.put(n, map.getOrDefault(n, 0) + 1);
+
+        var sortedFreq = new int[map.size()];
+        var i = 0;
+
+        for (var freq : map.values())
+            sortedFreq[i++] = freq;
+
+        Arrays.sort(sortedFreq);
+
+        for (i = 0; i < sortedFreq.length; i++) {
+            if (k < sortedFreq[i])
+                break;
+            k -= sortedFreq[i];
+        }
+        return sortedFreq.length - i;
+    }
+}
