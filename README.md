@@ -53,7 +53,7 @@ Here are the badges for the months of 2024:
 
 1. **Clone the Repository:**
 ```bash
-git clone https://github.com/your-username/leetcode-potd-2024.git
+git clone https://github.com/Harman8815/LeetCode.git
 ```
 2. **Navigate to the Specific Month/Day:**
 Browse through the folders to find the solution for a particular day.
