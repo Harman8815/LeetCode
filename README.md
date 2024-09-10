@@ -1,7 +1,10 @@
 # LeetCode Problem of the Day (PotD) Solutions - 2024 🚀
 
 Welcome to my repository containing solutions for LeetCode's Problem of the Day (PotD) for the year 2024. I've organized the solutions month-wise in separate folders for easy navigation and reference.
-<div align="center"><img alt="Cat Coder GIF" src="https://media4.giphy.com/media/13HBDT4QSTpveU/giphy.gif?cid=ecf05e470q3bekyset8rtehp58eaf7khfba6okykaq7lqmei&rid=giphy.gif&ct=g" /></div>
+
+<div align="center">
+  <img alt="Cat Coder GIF" src="https://media4.giphy.com/media/13HBDT4QSTpveU/giphy.gif?cid=ecf05e470q3bekyset8rtehp58eaf7khfba6okykaq7lqmei&rid=giphy.gif&ct=g" />
+</div>
 
 ## Table of Contents
 
@@ -30,15 +33,33 @@ The repository is organized in a month-wise structure. Here's how it looks:<br>
 
 Feel free to explore the folders to find solutions for specific problems.
 
+## Badges 🏆
+
+Here are the badges for the months of 2024:
+
+<div align="center">
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-01.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-02.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-03.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-04.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-05.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-06.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-07.gif" width="65px"></img>
+  <img src="https://assets.leetcode.com/static_assets/public/images/badges/2024/gif/2024-08.gif" width="65px"></img>
+</div>
+
+
 ## How to Use 🛠️
 
 1. **Clone the Repository:**
+```bash
 git clone https://github.com/your-username/leetcode-potd-2024.git
+```
 2. **Navigate to the Specific Month/Day:**
 Browse through the folders to find the solution for a particular day.
 
 3. **Read the Solution and Explanation:**
-Each day's  file (e.g., `1.md`) contains solution. Review these files for the detailed solution and explanation.
+Each day's file (e.g., `1.md`) contains the solution. Review these files for the detailed solution and explanation.
 
 4. **Contribute 🤝:**
 If you have an alternative solution or an improvement, feel free to contribute! See the [Contributing](#contributing) section for more details.
